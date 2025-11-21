@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ajibola Jeremiah Dedenuola | ML Engineer & Data Scientist</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Ajibola Jeremiah Dedenuola – Data Scientist & Machine Learning Engineer (Applied ML | MLOps | Cloud). Portfolio, projects, experience, and contact." />
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-alt: #020617;
+      --card: #020617;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56, 189, 248, 0.12);
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --border: #1f2937;
+      --danger: #f97373;
+      --radius-lg: 18px;
+      --radius-xl: 26px;
+      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.7);
+      --max-width: 1080px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #1d2437, #020617 55%);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Layout */
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: linear-gradient(to bottom, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.7), transparent);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(31, 41, 55, 0.7);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .nav__brand {
+      display: flex;
+      align-items: baseline;
+      gap: 0.35rem;
+      font-weight: 600;
+      font-size: 0.98rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .nav__brand span {
+      color: var(--accent);
+    }
+
+    .nav__links {
+      display: flex;
+      gap: 1.2rem;
+      font-size: 0.9rem;
+    }
+
+    .nav__links a {
+      color: var(--muted);
+      text-decoration: none;
+      padding-bottom: 2px;
+      border-bottom: 1px solid transparent;
+    }
+
+    .nav__links a:hover {
+      color: var(--text);
+      border-color: rgba(56, 189, 248, 0.5);
+    }
+
+    main {
+      flex: 1;
+    }
+
+    section {
+      padding: 3.5rem 0;
+    }
+
+    section + section {
+      border-top: 1px solid rgba(31, 41, 55, 0.8);
+    }
+
+    .section-title {
+      font-size: 1.2rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 2rem;
+    }
+
+    /* Hero */
+    .hero {
+      padding-top: 3.5rem;
+      padding-bottom: 3rem;
+    }
+
+    .hero__grid {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    @media (max-width: 880px) {
+      .hero__grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .hero__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.35rem 0.75rem;
+      border-radius: 999px;
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      background: rgba(15, 23, 42, 0.85);
+      color: var(--muted);
+      font-size: 0.78rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero__badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 12px rgba(34, 197, 94, 0.9);
+    }
+
+    .hero__title {
+      font-size: clamp(2.2rem, 4vw, 2.8rem);
+      line-height: 1.1;
+      margin-bottom: 0.6rem;
+    }
+
+    .hero__subtitle {
+      font-size: 1.02rem;
+      color: var(--muted);
+      margin-bottom: 1.4rem;
+    }
+
+    .hero__chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 1.6rem;
+    }
+
+    .chip {
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      font-size: 0.78rem;
+      padding: 0.18rem 0.7rem;
+      color: var(--muted);
+      background: rgba(15, 23, 42, 0.8);
+    }
+
+    .chip--accent {
+      border-color: rgba(56, 189, 248, 0.7);
+      color: var(--accent);
+      background: var(--accent-soft);
+    }
+
+    .hero__actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      padding: 0.6rem 1.1rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-size: 0.9rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.12s ease, box-shadow 0.12s ease,
+        background 0.12s ease, border-color 0.12s ease, color 0.12s ease;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+      color: #0b1120;
+      box-shadow: 0 14px 35px rgba(56, 189, 248, 0.35);
+      font-weight: 600;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 18px 45px rgba(56, 189, 248, 0.48);
+      text-decoration: none;
+    }
+
+    .btn-ghost {
+      border-color: rgba(148, 163, 184, 0.7);
+      color: var(--muted);
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    .btn-ghost:hover {
+      border-color: rgba(56, 189, 248, 0.7);
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .hero__meta {
+      margin-top: 1.4rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .hero__meta span {
+      color: #e5e7eb;
+    }
+
+    .hero__right {
+      background: radial-gradient(circle at top, #1e293b, #020617);
+      border-radius: var(--radius-xl);
+      padding: 1.4rem 1.2rem 1.6rem;
+      border: 1px solid rgba(51, 65, 85, 0.9);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .hero__right-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.9rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .hero__right-dots {
+      display: flex;
+      gap: 0.3rem;
+    }
+
+    .hero__dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #4b5563;
+    }
+
+    .hero__dot:nth-child(1) {
+      background: #f87171;
+    }
+    .hero__dot:nth-child(2) {
+      background: #facc15;
+    }
+    .hero__dot:nth-child(3) {
+      background: #4ade80;
+    }
+
+    .hero__tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-bottom: 1rem;
+    }
+
+    .tag {
+      font-size: 0.72rem;
+      padding: 0.18rem 0.55rem;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.92);
+      border: 1px solid rgba(75, 85, 99, 0.9);
+      color: var(--muted);
+    }
+
+    .hero__note {
+      background: rgba(15, 23, 42, 0.9);
+      border-radius: 0.9rem;
+      border: 1px dashed rgba(148, 163, 184, 0.7);
+      padding: 0.8rem 0.9rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 1.1rem;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.75rem;
+      font-size: 0.78rem;
+    }
+
+    .metric-card {
+      background: rgba(15, 23, 42, 0.96);
+      border-radius: 0.9rem;
+      padding: 0.6rem 0.7rem;
+      border: 1px solid rgba(51, 65, 85, 0.9);
+    }
+
+    .metric-label {
+      color: var(--muted);
+      font-size: 0.75rem;
+      margin-bottom: 0.23rem;
+    }
+
+    .metric-value {
+      font-size: 0.95rem;
+    }
+
+    .metric-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      font-size: 0.7rem;
+      padding: 0.1rem 0.5rem;
+      border-radius: 999px;
+      background: rgba(56, 189, 248, 0.08);
+      color: var(--accent);
+      margin-top: 0.2rem;
+    }
+
+    /* Experience */
+    .timeline {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .exp-card {
+      display: grid;
+      grid-template-columns: 120px minmax(0, 1fr);
+      gap: 1rem;
+      padding: 1.1rem 1.3rem;
+      border-radius: var(--radius-lg);
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(30, 64, 175, 0.8);
+    }
+
+    @media (max-width: 720px) {
+      .exp-card {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .exp-meta {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .exp-role {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.15rem;
+    }
+
+    .exp-company {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .exp-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-bottom: 0.55rem;
+    }
+
+    .exp-badge {
+      font-size: 0.7rem;
+      padding: 0.12rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      color: var(--muted);
+    }
+
+    .exp-points {
+      list-style: disc;
+      padding-left: 1.1rem;
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    .exp-points li + li {
+      margin-top: 0.25rem;
+    }
+
+    /* Projects */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.4rem;
+    }
+
+    @media (max-width: 880px) {
+      .projects-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .project-card {
+      background: var(--card);
+      border-radius: var(--radius-lg);
+      padding: 1.2rem 1.2rem 1.1rem;
+      border: 1px solid rgba(30, 64, 175, 0.9);
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.9);
+    }
+
+    .project-title-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.75rem;
+      align-items: center;
+      margin-bottom: 0.4rem;
+    }
+
+    .project-title {
+      font-size: 0.98rem;
+      font-weight: 600;
+    }
+
+    .project-tag {
+      font-size: 0.72rem;
+      padding: 0.12rem 0.55rem;
+      border-radius: 999px;
+      background: rgba(56, 189, 248, 0.12);
+      color: var(--accent);
+      border: 1px solid rgba(56, 189, 248, 0.7);
+      white-space: nowrap;
+    }
+
+    .project-meta {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.55rem;
+    }
+
+    .project-tech {
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .project-desc {
+      font-size: 0.86rem;
+      color: var(--muted);
+      margin-bottom: 0.55rem;
+    }
+
+    .project-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      font-size: 0.78rem;
+      margin-top: 0.3rem;
+    }
+
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .project-link:hover {
+      border-color: rgba(56, 189, 248, 0.8);
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    /* Tech stack */
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+    }
+
+    .pill {
+      font-size: 0.78rem;
+      padding: 0.18rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(71, 85, 105, 0.9);
+      background: rgba(15, 23, 42, 0.96);
+      color: var(--muted);
+    }
+
+    .pill-group {
+      margin-bottom: 1.2rem;
+    }
+
+    .pill-label {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.3rem;
+    }
+
+    /* Education & Certs */
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.2fr);
+      gap: 1.8rem;
+    }
+
+    @media (max-width: 880px) {
+      .two-col {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .card {
+      background: rgba(15, 23, 42, 0.95);
+      border-radius: var(--radius-lg);
+      padding: 1.2rem 1.3rem 1.1rem;
+      border: 1px solid rgba(30, 64, 175, 0.9);
+    }
+
+    .edu-item + .edu-item {
+      margin-top: 0.9rem;
+      padding-top: 0.9rem;
+      border-top: 1px dashed rgba(55, 65, 81, 0.9);
+    }
+
+    .edu-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .edu-meta {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .edu-detail {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 0.15rem;
+    }
+
+    .cert-item + .cert-item {
+      margin-top: 0.7rem;
+      padding-top: 0.7rem;
+      border-top: 1px dashed rgba(55, 65, 81, 0.9);
+    }
+
+    .cert-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .cert-meta {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-bottom: 0.15rem;
+    }
+
+    .cert-link {
+      font-size: 0.78rem;
+    }
+
+    /* Contact */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.1fr);
+      gap: 2rem;
+      align-items: center;
+    }
+
+    @media (max-width: 880px) {
+      .contact-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .contact-text {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .contact-list {
+      list-style: none;
+      font-size: 0.88rem;
+    }
+
+    .contact-list li + li {
+      margin-top: 0.45rem;
+    }
+
+    .contact-chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.5rem;
+    }
+
+    .contact-chip {
+      font-size: 0.78rem;
+      padding: 0.18rem 0.65rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      color: var(--muted);
+    }
+
+    .contact-card {
+      background: rgba(15, 23, 42, 0.95);
+      border-radius: var(--radius-xl);
+      border: 1px solid rgba(56, 189, 248, 0.5);
+      padding: 1.1rem 1.3rem 1.2rem;
+      box-shadow: var(--shadow-soft);
+      font-size: 0.86rem;
+      color: var(--muted);
+    }
+
+    .contact-heading {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      padding: 1.8rem 0 2.4rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      text-align: center;
+      border-top: 1px solid rgba(31, 41, 55, 0.9);
+      background: linear-gradient(to top, rgba(15, 23, 42, 0.97), transparent);
+    }
+
+    footer span {
+      color: var(--accent);
+    }
+
+  </style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <div class="container nav">
+      <div class="nav__brand">
+        <span>Ajibola</span> Dedenuola
+      </div>
+      <nav class="nav__links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#stack">Tech Stack</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="container hero__grid">
+        <div>
+          <div class="hero__badge">
+            <div class="hero__badge-dot"></div>
+            Open to roles in Canada & US (Remote / Hybrid)
+          </div>
+          <h1 class="hero__title">
+            Ajibola Jeremiah Dedenuola, M.Sc.
+          </h1>
+          <p class="hero__subtitle">
+            Data Scientist & Machine Learning Engineer focused on
+            <span style="color: var(--accent);">Applied ML, MLOps, and Cloud-native deployment</span> —
+            building ML systems that are reproducible, observable, and production-ready.
+          </p>
+
+          <div class="hero__chips">
+            <span class="chip chip--accent">Applied ML & MLOps</span>
+            <span class="chip">Vertex AI & Cloud Run</span>
+            <span class="chip">MLflow & Docker</span>
+            <span class="chip">Airflow Orchestration</span>
+            <span class="chip">Evidently AI Monitoring</span>
+          </div>
+
+          <div class="hero__actions">
+            <a class="btn btn-primary" href="./docs/Ajibola_Dedenuola_ML_Engineer_Resume.pdf" target="_blank" rel="noreferrer">
+              View Résumé
+            </a>
+            <a class="btn btn-ghost" href="https://github.com/JDede1" target="_blank" rel="noreferrer">
+              GitHub Profile
+            </a>
+            <a class="btn btn-ghost" href="https://www.linkedin.com/in/jeremiah-dedenuola" target="_blank" rel="noreferrer">
+              LinkedIn
+            </a>
+          </div>
+
+          <p class="hero__meta">
+            📍 Based in <span>Winnipeg, MB, Canada</span> • Focused on
+            <span>Data Science, Machine Learning Engineering, and MLOps</span>
+          </p>
+        </div>
+
+        <aside class="hero__right">
+          <div class="hero__right-header">
+            <div class="hero__right-dots">
+              <div class="hero__dot"></div>
+              <div class="hero__dot"></div>
+              <div class="hero__dot"></div>
+            </div>
+            <span>Profile Snapshot</span>
+          </div>
+
+          <div class="hero__tags">
+            <span class="tag">End-to-end ML Pipelines</span>
+            <span class="tag">Cloud ML Deployment (GCP)</span>
+            <span class="tag">Experiment Tracking (MLflow)</span>
+            <span class="tag">Containerized Training & Inference</span>
+            <span class="tag">Airflow Automation</span>
+            <span class="tag">Data Drift & Monitoring</span>
+          </div>
+
+          <div class="hero__note">
+            I build ML systems that prioritize clean data, reproducible pipelines,
+            and reliable deployments—so models stay useful long after the first
+            successful run.
+          </div>
+
+          <div class="metrics">
+            <div class="metric-card">
+              <div class="metric-label">Current Focus</div>
+              <div class="metric-value">Applied ML & MLOps</div>
+              <div class="metric-pill">Vertex AI • MLflow • Cloud Run</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Industry Experience</div>
+              <div class="metric-value">Data, Compliance & Ops</div>
+              <div class="metric-pill">CRA • Northland Properties</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Education</div>
+              <div class="metric-value">M.Sc., Information Science</div>
+              <div class="metric-pill">Machine Learning Focus</div>
+            </div>
+            <div class="metric-card">
+              <div class="metric-label">Specialties</div>
+              <div class="metric-value">ML Pipelines & Monitoring</div>
+              <div class="metric-pill">Evidently AI • Airflow</div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">About</h2>
+        <p style="max-width: 720px; color: var(--muted); font-size: 0.94rem;">
+          I’m a <strong>Data Scientist & Machine Learning Engineer</strong> who builds
+          reproducible, scalable, and cloud-ready ML systems. My work spans
+          <strong>end-to-end ML pipelines</strong> (training → evaluation → deployment → monitoring),
+          <strong>cloud ML deployment</strong> on Vertex AI and Cloud Run, and
+          <strong>experiment tracking</strong> and registries with MLflow.
+          I care about clean data, reliable pipelines, and production-grade ML that is transparent,
+          observable, and aligned with real business needs.
+        </p>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience">
+      <div class="container">
+        <h2 class="section-title">Experience</h2>
+
+        <div class="timeline">
+          <!-- Manifest -->
+          <article class="exp-card">
+            <div class="exp-meta">
+              <div>2025 – Present</div>
+              <div style="margin-top: 0.2rem;">Winnipeg, Canada</div>
+            </div>
+            <div>
+              <div class="exp-role">Applied ML & MLOps</div>
+              <div class="exp-company">Manifest &amp; Company Inc.</div>
+              <div class="exp-badges">
+                <span class="exp-badge">Vertex AI</span>
+                <span class="exp-badge">Cloud Run</span>
+                <span class="exp-badge">MLflow</span>
+                <span class="exp-badge">Docker</span>
+                <span class="exp-badge">Airflow</span>
+                <span class="exp-badge">Evidently AI</span>
+              </div>
+              <ul class="exp-points">
+                <li>
+                  Design, deploy, and maintain cloud-based ML systems using Vertex AI, Cloud Run, MLflow, Docker, and Airflow.
+                </li>
+                <li>
+                  Build reproducible training and evaluation pipelines, including containerized preprocessing, training, and inference workflows.
+                </li>
+                <li>
+                  Implement experiment tracking and model registry with MLflow to standardize model lifecycle management.
+                </li>
+                <li>
+                  Automate batch inference, training cycles, and feature workflows using Airflow.
+                </li>
+                <li>
+                  Add monitoring and drift detection workflows with Evidently AI and integrate CI/CD with GitHub Actions.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- CRA -->
+          <article class="exp-card">
+            <div class="exp-meta">
+              <div>2021 – 2024</div>
+              <div style="margin-top: 0.2rem;">Canada Revenue Agency</div>
+            </div>
+            <div>
+              <div class="exp-role">Data Quality & Compliance Analytics</div>
+              <div class="exp-company">Canada Revenue Agency</div>
+              <div class="exp-badges">
+                <span class="exp-badge">Data Quality</span>
+                <span class="exp-badge">Compliance Analytics</span>
+                <span class="exp-badge">SQL</span>
+                <span class="exp-badge">Excel</span>
+              </div>
+              <ul class="exp-points">
+                <li>
+                  Worked with multi-year payroll, GST/HST, and remittance datasets to support compliance analytics.
+                </li>
+                <li>
+                  Built SQL/Excel validation pipelines that reduced manual review effort by approximately 25%.
+                </li>
+                <li>
+                  Reconciled multi-system financial datasets and identified structural anomalies in reporting.
+                </li>
+                <li>
+                  Conducted pattern analysis to support compliance risk classification and audit selection.
+                </li>
+                <li>
+                  Standardized reproducible, audit-ready reconciliation workflows for repeated use.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Northland -->
+          <article class="exp-card">
+            <div class="exp-meta">
+              <div>2017 – 2021</div>
+              <div style="margin-top: 0.2rem;">Northland Properties</div>
+            </div>
+            <div>
+              <div class="exp-role">Data Operations & Analytics</div>
+              <div class="exp-company">Northland Properties</div>
+              <div class="exp-badges">
+                <span class="exp-badge">Reporting Automation</span>
+                <span class="exp-badge">KPI Dashboards</span>
+                <span class="exp-badge">Data Cleaning</span>
+              </div>
+              <ul class="exp-points">
+                <li>
+                  Worked with operational datasets across hotel and restaurant properties to support reporting and analytics.
+                </li>
+                <li>
+                  Cleaned and consolidated cross-property data to enable consistent reporting and analysis.
+                </li>
+                <li>
+                  Automated SQL/Excel reporting workflows, reducing manual reporting effort by around 40%.
+                </li>
+                <li>
+                  Standardized KPI definitions and reporting templates for stakeholders.
+                </li>
+                <li>
+                  Performed trend analysis to inform pricing and operational decisions.
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <div class="container">
+        <h2 class="section-title">Selected Projects</h2>
+
+        <div class="projects-grid">
+          <!-- Loan Default -->
+          <article class="project-card">
+            <div class="project-title-row">
+              <h3 class="project-title">Loan Default Prediction — End-to-End MLOps Pipeline</h3>
+              <span class="project-tag">MLOps</span>
+            </div>
+            <p class="project-meta">
+              <strong>Repo:</strong>
+              <a href="https://github.com/JDede1/loan_default_prediction" target="_blank" rel="noreferrer">
+                github.com/JDede1/loan_default_prediction
+              </a>
+            </p>
+            <p class="project-tech">
+              Tech: Python, XGBoost, Scikit-learn, MLflow, Docker, Airflow, Vertex AI, Cloud Run, Terraform, Evidently AI, Optuna
+            </p>
+            <p class="project-desc">
+              Built an end-to-end MLOps pipeline covering data preparation, feature engineering, training, hyperparameter tuning,
+              evaluation, deployment, and monitoring. Experiments and models are tracked and registered in MLflow, with containerized
+              training and inference deployed on Cloud Run. Automated batch inference, retraining, and drift detection workflows
+              run via Airflow, with monitoring powered by Evidently AI.
+            </p>
+            <div class="project-links">
+              <a class="project-link" href="https://github.com/JDede1/loan_default_prediction" target="_blank" rel="noreferrer">
+                View repository
+              </a>
+            </div>
+          </article>
+
+          <!-- RAG -->
+          <article class="project-card">
+            <div class="project-title-row">
+              <h3 class="project-title">RAG System for Canadian Banking FAQs</h3>
+              <span class="project-tag">NLP • RAG</span>
+            </div>
+            <p class="project-meta">
+              <strong>Repo:</strong>
+              <a href="https://github.com/JDede1/rag-project" target="_blank" rel="noreferrer">
+                github.com/JDede1/rag-project
+              </a>
+            </p>
+            <p class="project-tech">
+              Tech: Python, SentenceTransformers, FAISS, FastAPI, Streamlit, Phi-3 Mini
+            </p>
+            <p class="project-desc">
+              Developed a modular retrieval-augmented generation (RAG) pipeline with ingestion, preprocessing, embedding generation,
+              FAISS indexing, and LLM-based response generation. Implemented a FastAPI backend for retrieval and generation, with
+              optimized similarity search. Added reliability features such as an “I don’t know” fallback and a Streamlit UI with
+              evidence tracing.
+            </p>
+            <div class="project-links">
+              <a class="project-link" href="https://github.com/JDede1/rag-project" target="_blank" rel="noreferrer">
+                View repository
+              </a>
+            </div>
+          </article>
+
+          <!-- Transformer Fine-tuning -->
+          <article class="project-card">
+            <div class="project-title-row">
+              <h3 class="project-title">Transformer Fine-Tuning — RoBERTa &amp; BART NLP Pipeline</h3>
+              <span class="project-tag">NLP</span>
+            </div>
+            <p class="project-meta">
+              <strong>Repo:</strong>
+              <a href="https://github.com/JDede1/applied-nlp-assignment-4" target="_blank" rel="noreferrer">
+                github.com/JDede1/applied-nlp-assignment-4
+              </a>
+            </p>
+            <p class="project-tech">
+              Tech: Hugging Face Transformers, PyTorch, Datasets, Python
+            </p>
+            <p class="project-desc">
+              Created reproducible pipelines for fine-tuning RoBERTa and BART on classification and generative explanation tasks.
+              Implemented data preprocessing including tokenization, cleaning, and padding/truncation. Achieved around 0.93 accuracy
+              on classification tasks and strong BLEU/ROUGE metrics for generative outputs.
+            </p>
+            <div class="project-links">
+              <a class="project-link" href="https://github.com/JDede1/applied-nlp-assignment-4" target="_blank" rel="noreferrer">
+                View repository
+              </a>
+            </div>
+          </article>
+
+          <!-- Credit Risk -->
+          <article class="project-card">
+            <div class="project-title-row">
+              <h3 class="project-title">Credit Risk Classification — ML Modeling Pipeline</h3>
+              <span class="project-tag">ML</span>
+            </div>
+            <p class="project-meta">
+              <strong>Repo:</strong>
+              <a href="https://github.com/JDede1/final-project-assignment" target="_blank" rel="noreferrer">
+                github.com/JDede1/final-project-assignment
+              </a>
+            </p>
+            <p class="project-tech">
+              Tech: Python, Pandas, Scikit-learn, XGBoost, Random Forest
+            </p>
+            <p class="project-desc">
+              Built supervised learning models to classify credit risk using engineered financial and behavioral features.
+              Performed data cleaning, outlier handling, imbalance correction, and feature scaling. Achieved around 90% accuracy
+              and approximately 96% recall, with interpretable analysis of key predictors and credit-risk drivers.
+            </p>
+            <div class="project-links">
+              <a class="project-link" href="https://github.com/JDede1/final-project-assignment" target="_blank" rel="noreferrer">
+                View repository
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <p style="margin-top: 1.5rem; font-size: 0.86rem; color: var(--muted);">
+          Additional work in computer vision (YOLOv5), Siamese neural networks for face verification, visualization dashboards, and
+          other ML experiments is available across my GitHub repositories.
+        </p>
+      </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section id="stack">
+      <div class="container">
+        <h2 class="section-title">Tech Stack</h2>
+
+        <div class="pill-group">
+          <div class="pill-label">Languages & Core Libraries</div>
+          <div class="pill-row">
+            <span class="pill">Python</span>
+            <span class="pill">NumPy</span>
+            <span class="pill">Pandas</span>
+            <span class="pill">Matplotlib</span>
+            <span class="pill">Seaborn</span>
+          </div>
+        </div>
+
+        <div class="pill-group">
+          <div class="pill-label">Machine Learning & Deep Learning</div>
+          <div class="pill-row">
+            <span class="pill">Scikit-learn</span>
+            <span class="pill">XGBoost</span>
+            <span class="pill">PyTorch</span>
+            <span class="pill">Keras</span>
+            <span class="pill">Hugging Face</span>
+          </div>
+        </div>
+
+        <div class="pill-group">
+          <div class="pill-label">NLP / LLMs & RAG</div>
+          <div class="pill-row">
+            <span class="pill">Transformers (HF)</span>
+            <span class="pill">SentenceTransformers</span>
+            <span class="pill">FAISS</span>
+            <span class="pill">FastAPI</span>
+          </div>
+        </div>
+
+        <div class="pill-group">
+          <div class="pill-label">MLOps, Pipelines & Orchestration</div>
+          <div class="pill-row">
+            <span class="pill">MLflow</span>
+            <span class="pill">Apache Airflow</span>
+            <span class="pill">Docker</span>
+            <span class="pill">Terraform</span>
+          </div>
+        </div>
+
+        <div class="pill-group">
+          <div class="pill-label">Cloud & Deployment (GCP)</div>
+          <div class="pill-row">
+            <span class="pill">Google Cloud</span>
+            <span class="pill">Vertex AI</span>
+            <span class="pill">Cloud Run</span>
+            <span class="pill">Cloud Storage</span>
+          </div>
+        </div>
+
+        <div class="pill-group">
+          <div class="pill-label">Data Engineering & Databases</div>
+          <div class="pill-row">
+            <span class="pill">BigQuery</span>
+            <span class="pill">SQL</span>
+            <span class="pill">ETL Pipelines</span>
+          </div>
+        </div>
+
+        <div class="pill-group">
+          <div class="pill-label">Monitoring & Evaluation</div>
+          <div class="pill-row">
+            <span class="pill">Evidently AI</span>
+            <span class="pill">Logging & Metrics</span>
+          </div>
+        </div>
+
+        <div class="pill-group">
+          <div class="pill-label">Version Control & Dev Tools</div>
+          <div class="pill-row">
+            <span class="pill">Git</span>
+            <span class="pill">GitHub</span>
+            <span class="pill">GitHub Actions</span>
+            <span class="pill">VS Code</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education & Certifications -->
+    <section id="education">
+      <div class="container">
+        <h2 class="section-title">Education & Certifications</h2>
+
+        <div class="two-col">
+          <!-- Education -->
+          <div class="card">
+            <h3 style="font-size: 0.98rem; margin-bottom: 0.6rem;">Education</h3>
+            <div class="edu-item">
+              <div class="edu-title">
+                M.Sc. in Information Science (Machine Learning Focus)
+              </div>
+              <div class="edu-meta">
+                University of Arizona • Jan 2023 – May 2025
+              </div>
+              <div class="edu-detail">
+                GPA: <strong>3.78 / 4.00</strong>
+              </div>
+              <div class="edu-detail" style="margin-top: 0.3rem;">
+                Degree verification:
+                <a href="https://www.michaelsutter.com/ediploma?fn=diplomastatuscheck&key=0200000070f97859e2abf7fc9e66ea6ca9c7f2b1a1116c7f5febf4cafdb6ac708dcf5dba7020d23b5eda7c540f0b0a2f78ceb9dc041b77d64cfa0bf7408cad9caa677742" target="_blank" rel="noreferrer">
+                  View official record
+                </a>
+              </div>
+            </div>
+
+            <div class="edu-item">
+              <div class="edu-title">
+                Post-Baccalaureate Diploma – Human Resources Management
+              </div>
+              <div class="edu-meta">
+                Thompson Rivers University • 2014 – 2016
+              </div>
+            </div>
+
+            <div class="edu-item">
+              <div class="edu-title">
+                B.Sc. in Zoology
+              </div>
+              <div class="edu-meta">
+                University of Ibadan • 2010
+              </div>
+            </div>
+          </div>
+
+          <!-- Certifications -->
+          <div class="card">
+            <h3 style="font-size: 0.98rem; margin-bottom: 0.6rem;">Certifications</h3>
+
+            <div class="cert-item">
+              <div class="cert-title">
+                DataTalks.Club — MLOps Zoomcamp Certificate
+              </div>
+              <div class="cert-meta">Issued Aug 2025</div>
+              <div class="cert-link">
+                <a href="https://certificate.datatalks.club/mlops-zoomcamp/2025/135af8bdd3af98f61b703fb921c5fe872bde648b.pdf" target="_blank" rel="noreferrer">
+                  View credential
+                </a>
+              </div>
+            </div>
+
+            <div class="cert-item">
+              <div class="cert-title">
+                Oracle Certified Foundations Associate: AI Foundations
+              </div>
+              <div class="cert-meta">
+                Oracle • Oracle Cloud Infrastructure (OCI) • Issued Oct 2025
+              </div>
+              <div class="cert-link">
+                <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=DF7267B9AE49CCDD36EEA535184E37AC2D691308F8479A4D88D1F3977053711E" target="_blank" rel="noreferrer">
+                  View credential
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+
+        <div class="contact-grid">
+          <div>
+            <p class="contact-text">
+              I’m open to opportunities in <strong>Data Science</strong>,
+              <strong>Machine Learning Engineering</strong>, and <strong>MLOps</strong> —
+              including remote roles across Canada and the United States.
+              Feel free to reach out for collaboration, technical discussions,
+              or career opportunities.
+            </p>
+
+            <ul class="contact-list">
+              <li>
+                📧 <strong>Email:</strong>
+                <a href="mailto:ajdedenuola@gmail.com">ajdedenuola@gmail.com</a>
+              </li>
+              <li>
+                💻 <strong>GitHub:</strong>
+                <a href="https://github.com/JDede1" target="_blank" rel="noreferrer">
+                  github.com/JDede1
+                </a>
+              </li>
+              <li>
+                🔗 <strong>LinkedIn:</strong>
+                <a href="https://www.linkedin.com/in/jeremiah-dedenuola" target="_blank" rel="noreferrer">
+                  linkedin.com/in/jeremiah-dedenuola
+                </a>
+              </li>
+              <li>
+                📄 <strong>Résumé:</strong>
+                <code>./docs/Ajibola_Dedenuola_ML_Engineer_Resume.pdf</code>
+              </li>
+            </ul>
+
+            <div class="contact-chip-row">
+              <span class="contact-chip">Data Science</span>
+              <span class="contact-chip">Machine Learning Engineering</span>
+              <span class="contact-chip">MLOps</span>
+              <span class="contact-chip">Cloud ML</span>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-heading">How I like to work</div>
+            <p>
+              I enjoy taking messy, real-world problems and turning them into
+              structured pipelines, clear experiments, and ML systems that can be
+              deployed, monitored, and iterated on.
+            </p>
+            <p style="margin-top: 0.5rem;">
+              I value <strong>clarity</strong>, <strong>reliability</strong>, and
+              <strong>communication</strong> — and I aim to make ML solutions
+              understandable for both technical and non-technical stakeholders.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      ✨ Built to mirror my GitHub profile — focused on <span>transparent</span>,
+      <span>reliable</span>, and <span>production-focused</span> ML systems.
+    </div>
+  </footer>
+</div>
+</body>
+</html>
