@@ -4,678 +4,14 @@
   <meta charset="UTF-8" />
   <title>Ajibola Jeremiah Dedenuola | ML Engineer & Data Scientist</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Ajibola Jeremiah Dedenuola – Data Scientist & Machine Learning Engineer (Applied ML | MLOps | Cloud). Portfolio, projects, experience, and contact." />
-  <style>
-    :root {
-      --bg: #0f172a;
-      --bg-alt: #020617;
-      --card: #020617;
-      --accent: #38bdf8;
-      --accent-soft: rgba(56, 189, 248, 0.12);
-      --text: #e5e7eb;
-      --muted: #9ca3af;
-      --border: #1f2937;
-      --danger: #f97373;
-      --radius-lg: 18px;
-      --radius-xl: 26px;
-      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.7);
-      --max-width: 1080px;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
-        "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #1d2437, #020617 55%);
-      color: var(--text);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    /* Layout */
-    .page {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .container {
-      width: 100%;
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 0 1.5rem;
-    }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: linear-gradient(to bottom, rgba(15, 23, 42, 0.95), rgba(15, 23, 42, 0.7), transparent);
-      backdrop-filter: blur(18px);
-      border-bottom: 1px solid rgba(31, 41, 55, 0.7);
-    }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 64px;
-    }
-
-    .nav__brand {
-      display: flex;
-      align-items: baseline;
-      gap: 0.35rem;
-      font-weight: 600;
-      font-size: 0.98rem;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
-    .nav__brand span {
-      color: var(--accent);
-    }
-
-    .nav__links {
-      display: flex;
-      gap: 1.2rem;
-      font-size: 0.9rem;
-    }
-
-    .nav__links a {
-      color: var(--muted);
-      text-decoration: none;
-      padding-bottom: 2px;
-      border-bottom: 1px solid transparent;
-    }
-
-    .nav__links a:hover {
-      color: var(--text);
-      border-color: rgba(56, 189, 248, 0.5);
-    }
-
-    main {
-      flex: 1;
-    }
-
-    section {
-      padding: 3.5rem 0;
-    }
-
-    section + section {
-      border-top: 1px solid rgba(31, 41, 55, 0.8);
-    }
-
-    .section-title {
-      font-size: 1.2rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 2rem;
-    }
-
-    /* Hero */
-    .hero {
-      padding-top: 3.5rem;
-      padding-bottom: 3rem;
-    }
-
-    .hero__grid {
-      display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
-      gap: 2.5rem;
-      align-items: center;
-    }
-
-    @media (max-width: 880px) {
-      .hero__grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
-    .hero__badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.35rem 0.75rem;
-      border-radius: 999px;
-      border: 1px solid rgba(56, 189, 248, 0.4);
-      background: rgba(15, 23, 42, 0.85);
-      color: var(--muted);
-      font-size: 0.78rem;
-      margin-bottom: 1rem;
-    }
-
-    .hero__badge-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      background: #22c55e;
-      box-shadow: 0 0 12px rgba(34, 197, 94, 0.9);
-    }
-
-    .hero__title {
-      font-size: clamp(2.2rem, 4vw, 2.8rem);
-      line-height: 1.1;
-      margin-bottom: 0.6rem;
-    }
-
-    .hero__subtitle {
-      font-size: 1.02rem;
-      color: var(--muted);
-      margin-bottom: 1.4rem;
-    }
-
-    .hero__chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      margin-bottom: 1.6rem;
-    }
-
-    .chip {
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.6);
-      font-size: 0.78rem;
-      padding: 0.18rem 0.7rem;
-      color: var(--muted);
-      background: rgba(15, 23, 42, 0.8);
-    }
-
-    .chip--accent {
-      border-color: rgba(56, 189, 248, 0.7);
-      color: var(--accent);
-      background: var(--accent-soft);
-    }
-
-    .hero__actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.85rem;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.4rem;
-      padding: 0.6rem 1.1rem;
-      border-radius: 999px;
-      border: 1px solid transparent;
-      font-size: 0.9rem;
-      cursor: pointer;
-      text-decoration: none;
-      transition: transform 0.12s ease, box-shadow 0.12s ease,
-        background 0.12s ease, border-color 0.12s ease, color 0.12s ease;
-      white-space: nowrap;
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, #38bdf8, #0ea5e9);
-      color: #0b1120;
-      box-shadow: 0 14px 35px rgba(56, 189, 248, 0.35);
-      font-weight: 600;
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 18px 45px rgba(56, 189, 248, 0.48);
-      text-decoration: none;
-    }
-
-    .btn-ghost {
-      border-color: rgba(148, 163, 184, 0.7);
-      color: var(--muted);
-      background: rgba(15, 23, 42, 0.9);
-    }
-
-    .btn-ghost:hover {
-      border-color: rgba(56, 189, 248, 0.7);
-      color: var(--text);
-      text-decoration: none;
-    }
-
-    .hero__meta {
-      margin-top: 1.4rem;
-      font-size: 0.85rem;
-      color: var(--muted);
-    }
-
-    .hero__meta span {
-      color: #e5e7eb;
-    }
-
-    .hero__right {
-      background: radial-gradient(circle at top, #1e293b, #020617);
-      border-radius: var(--radius-xl);
-      padding: 1.4rem 1.2rem 1.6rem;
-      border: 1px solid rgba(51, 65, 85, 0.9);
-      box-shadow: var(--shadow-soft);
-    }
-
-    .hero__right-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 0.9rem;
-      font-size: 0.8rem;
-      color: var(--muted);
-    }
-
-    .hero__right-dots {
-      display: flex;
-      gap: 0.3rem;
-    }
-
-    .hero__dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      background: #4b5563;
-    }
-
-    .hero__dot:nth-child(1) {
-      background: #f87171;
-    }
-    .hero__dot:nth-child(2) {
-      background: #facc15;
-    }
-    .hero__dot:nth-child(3) {
-      background: #4ade80;
-    }
-
-    .hero__tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.35rem;
-      margin-bottom: 1rem;
-    }
-
-    .tag {
-      font-size: 0.72rem;
-      padding: 0.18rem 0.55rem;
-      border-radius: 999px;
-      background: rgba(15, 23, 42, 0.92);
-      border: 1px solid rgba(75, 85, 99, 0.9);
-      color: var(--muted);
-    }
-
-    .hero__note {
-      background: rgba(15, 23, 42, 0.9);
-      border-radius: 0.9rem;
-      border: 1px dashed rgba(148, 163, 184, 0.7);
-      padding: 0.8rem 0.9rem;
-      font-size: 0.8rem;
-      color: var(--muted);
-      margin-bottom: 1.1rem;
-    }
-
-    .metrics {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 0.75rem;
-      font-size: 0.78rem;
-    }
-
-    .metric-card {
-      background: rgba(15, 23, 42, 0.96);
-      border-radius: 0.9rem;
-      padding: 0.6rem 0.7rem;
-      border: 1px solid rgba(51, 65, 85, 0.9);
-    }
-
-    .metric-label {
-      color: var(--muted);
-      font-size: 0.75rem;
-      margin-bottom: 0.23rem;
-    }
-
-    .metric-value {
-      font-size: 0.95rem;
-    }
-
-    .metric-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.25rem;
-      font-size: 0.7rem;
-      padding: 0.1rem 0.5rem;
-      border-radius: 999px;
-      background: rgba(56, 189, 248, 0.08);
-      color: var(--accent);
-      margin-top: 0.2rem;
-    }
-
-    /* Experience */
-    .timeline {
-      display: grid;
-      gap: 1.5rem;
-    }
-
-    .exp-card {
-      display: grid;
-      grid-template-columns: 120px minmax(0, 1fr);
-      gap: 1rem;
-      padding: 1.1rem 1.3rem;
-      border-radius: var(--radius-lg);
-      background: rgba(15, 23, 42, 0.9);
-      border: 1px solid rgba(30, 64, 175, 0.8);
-    }
-
-    @media (max-width: 720px) {
-      .exp-card {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
-    .exp-meta {
-      font-size: 0.8rem;
-      color: var(--muted);
-    }
-
-    .exp-role {
-      font-size: 1rem;
-      font-weight: 600;
-      margin-bottom: 0.15rem;
-    }
-
-    .exp-company {
-      color: var(--muted);
-      font-size: 0.9rem;
-      margin-bottom: 0.4rem;
-    }
-
-    .exp-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.35rem;
-      margin-bottom: 0.55rem;
-    }
-
-    .exp-badge {
-      font-size: 0.7rem;
-      padding: 0.12rem 0.55rem;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.5);
-      color: var(--muted);
-    }
-
-    .exp-points {
-      list-style: disc;
-      padding-left: 1.1rem;
-      font-size: 0.88rem;
-      color: var(--muted);
-    }
-
-    .exp-points li + li {
-      margin-top: 0.25rem;
-    }
-
-    /* Projects */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1.4rem;
-    }
-
-    @media (max-width: 880px) {
-      .projects-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
-    .project-card {
-      background: var(--card);
-      border-radius: var(--radius-lg);
-      padding: 1.2rem 1.2rem 1.1rem;
-      border: 1px solid rgba(30, 64, 175, 0.9);
-      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.9);
-    }
-
-    .project-title-row {
-      display: flex;
-      justify-content: space-between;
-      gap: 0.75rem;
-      align-items: center;
-      margin-bottom: 0.4rem;
-    }
-
-    .project-title {
-      font-size: 0.98rem;
-      font-weight: 600;
-    }
-
-    .project-tag {
-      font-size: 0.72rem;
-      padding: 0.12rem 0.55rem;
-      border-radius: 999px;
-      background: rgba(56, 189, 248, 0.12);
-      color: var(--accent);
-      border: 1px solid rgba(56, 189, 248, 0.7);
-      white-space: nowrap;
-    }
-
-    .project-meta {
-      font-size: 0.8rem;
-      color: var(--muted);
-      margin-bottom: 0.55rem;
-    }
-
-    .project-tech {
-      font-size: 0.75rem;
-      color: var(--muted);
-      margin-bottom: 0.4rem;
-    }
-
-    .project-desc {
-      font-size: 0.86rem;
-      color: var(--muted);
-      margin-bottom: 0.55rem;
-    }
-
-    .project-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      font-size: 0.78rem;
-      margin-top: 0.3rem;
-    }
-
-    .project-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.3rem;
-      padding: 0.25rem 0.7rem;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.7);
-      color: var(--muted);
-      text-decoration: none;
-    }
-
-    .project-link:hover {
-      border-color: rgba(56, 189, 248, 0.8);
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    /* Tech stack */
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.45rem;
-    }
-
-    .pill {
-      font-size: 0.78rem;
-      padding: 0.18rem 0.7rem;
-      border-radius: 999px;
-      border: 1px solid rgba(71, 85, 105, 0.9);
-      background: rgba(15, 23, 42, 0.96);
-      color: var(--muted);
-    }
-
-    .pill-group {
-      margin-bottom: 1.2rem;
-    }
-
-    .pill-label {
-      font-size: 0.8rem;
-      color: var(--muted);
-      margin-bottom: 0.3rem;
-    }
-
-    /* Education & Certs */
-    .two-col {
-      display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.2fr);
-      gap: 1.8rem;
-    }
-
-    @media (max-width: 880px) {
-      .two-col {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
-    .card {
-      background: rgba(15, 23, 42, 0.95);
-      border-radius: var(--radius-lg);
-      padding: 1.2rem 1.3rem 1.1rem;
-      border: 1px solid rgba(30, 64, 175, 0.9);
-    }
-
-    .edu-item + .edu-item {
-      margin-top: 0.9rem;
-      padding-top: 0.9rem;
-      border-top: 1px dashed rgba(55, 65, 81, 0.9);
-    }
-
-    .edu-title {
-      font-size: 0.95rem;
-      font-weight: 600;
-    }
-
-    .edu-meta {
-      font-size: 0.8rem;
-      color: var(--muted);
-    }
-
-    .edu-detail {
-      font-size: 0.8rem;
-      color: var(--muted);
-      margin-top: 0.15rem;
-    }
-
-    .cert-item + .cert-item {
-      margin-top: 0.7rem;
-      padding-top: 0.7rem;
-      border-top: 1px dashed rgba(55, 65, 81, 0.9);
-    }
-
-    .cert-title {
-      font-size: 0.9rem;
-      font-weight: 600;
-    }
-
-    .cert-meta {
-      font-size: 0.78rem;
-      color: var(--muted);
-      margin-bottom: 0.15rem;
-    }
-
-    .cert-link {
-      font-size: 0.78rem;
-    }
-
-    /* Contact */
-    .contact-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.1fr);
-      gap: 2rem;
-      align-items: center;
-    }
-
-    @media (max-width: 880px) {
-      .contact-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-
-    .contact-text {
-      font-size: 0.95rem;
-      color: var(--muted);
-      margin-bottom: 1rem;
-    }
-
-    .contact-list {
-      list-style: none;
-      font-size: 0.88rem;
-    }
-
-    .contact-list li + li {
-      margin-top: 0.45rem;
-    }
-
-    .contact-chip-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      margin-top: 0.5rem;
-    }
-
-    .contact-chip {
-      font-size: 0.78rem;
-      padding: 0.18rem 0.65rem;
-      border-radius: 999px;
-      border: 1px solid rgba(148, 163, 184, 0.6);
-      color: var(--muted);
-    }
-
-    .contact-card {
-      background: rgba(15, 23, 42, 0.95);
-      border-radius: var(--radius-xl);
-      border: 1px solid rgba(56, 189, 248, 0.5);
-      padding: 1.1rem 1.3rem 1.2rem;
-      box-shadow: var(--shadow-soft);
-      font-size: 0.86rem;
-      color: var(--muted);
-    }
-
-    .contact-heading {
-      font-size: 0.95rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
-
-    footer {
-      padding: 1.8rem 0 2.4rem;
-      font-size: 0.8rem;
-      color: var(--muted);
-      text-align: center;
-      border-top: 1px solid rgba(31, 41, 55, 0.9);
-      background: linear-gradient(to top, rgba(15, 23, 42, 0.97), transparent);
-    }
-
-    footer span {
-      color: var(--accent);
-    }
-
-  </style>
+  <meta
+    name="description"
+    content="Ajibola Jeremiah Dedenuola – Data Scientist & Machine Learning Engineer (Applied ML | MLOps | Cloud). Portfolio, projects, experience, and contact."
+  />
+  <!-- Favicon (upload assets/favicon.png for this to work) -->
+  <link rel="icon" href="assets/favicon.png" type="image/png" />
+  <!-- External stylesheet -->
+  <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
 <div class="page">
@@ -692,31 +28,35 @@
         <a href="#education">Education</a>
         <a href="#contact">Contact</a>
       </nav>
+      <!-- Theme toggle (icon-based) -->
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle light/dark mode">
+        🌙
+      </button>
     </div>
   </header>
 
   <main>
     <!-- Hero -->
-    <section class="hero" id="top">
+    <section class="hero reveal-on-scroll" id="top">
       <div class="container hero__grid">
         <div>
           <div class="hero__badge">
             <div class="hero__badge-dot"></div>
-            Open to roles in Canada & US (Remote / Hybrid)
+            Open to roles in Canada &amp; US (Remote / Hybrid)
           </div>
           <h1 class="hero__title">
             Ajibola Jeremiah Dedenuola, M.Sc.
           </h1>
           <p class="hero__subtitle">
-            Data Scientist & Machine Learning Engineer focused on
+            Data Scientist &amp; Machine Learning Engineer focused on
             <span style="color: var(--accent);">Applied ML, MLOps, and Cloud-native deployment</span> —
             building ML systems that are reproducible, observable, and production-ready.
           </p>
 
           <div class="hero__chips">
-            <span class="chip chip--accent">Applied ML & MLOps</span>
-            <span class="chip">Vertex AI & Cloud Run</span>
-            <span class="chip">MLflow & Docker</span>
+            <span class="chip chip--accent">Applied ML &amp; MLOps</span>
+            <span class="chip">Vertex AI &amp; Cloud Run</span>
+            <span class="chip">MLflow &amp; Docker</span>
             <span class="chip">Airflow Orchestration</span>
             <span class="chip">Evidently AI Monitoring</span>
           </div>
@@ -753,9 +93,9 @@
             <span class="tag">End-to-end ML Pipelines</span>
             <span class="tag">Cloud ML Deployment (GCP)</span>
             <span class="tag">Experiment Tracking (MLflow)</span>
-            <span class="tag">Containerized Training & Inference</span>
+            <span class="tag">Containerized Training &amp; Inference</span>
             <span class="tag">Airflow Automation</span>
-            <span class="tag">Data Drift & Monitoring</span>
+            <span class="tag">Data Drift &amp; Monitoring</span>
           </div>
 
           <div class="hero__note">
@@ -767,12 +107,12 @@
           <div class="metrics">
             <div class="metric-card">
               <div class="metric-label">Current Focus</div>
-              <div class="metric-value">Applied ML & MLOps</div>
+              <div class="metric-value">Applied ML &amp; MLOps</div>
               <div class="metric-pill">Vertex AI • MLflow • Cloud Run</div>
             </div>
             <div class="metric-card">
               <div class="metric-label">Industry Experience</div>
-              <div class="metric-value">Data, Compliance & Ops</div>
+              <div class="metric-value">Data, Compliance &amp; Ops</div>
               <div class="metric-pill">CRA • Northland Properties</div>
             </div>
             <div class="metric-card">
@@ -782,7 +122,7 @@
             </div>
             <div class="metric-card">
               <div class="metric-label">Specialties</div>
-              <div class="metric-value">ML Pipelines & Monitoring</div>
+              <div class="metric-value">ML Pipelines &amp; Monitoring</div>
               <div class="metric-pill">Evidently AI • Airflow</div>
             </div>
           </div>
@@ -791,11 +131,11 @@
     </section>
 
     <!-- About -->
-    <section id="about">
+    <section id="about" class="reveal-on-scroll">
       <div class="container">
         <h2 class="section-title">About</h2>
         <p style="max-width: 720px; color: var(--muted); font-size: 0.94rem;">
-          I’m a <strong>Data Scientist & Machine Learning Engineer</strong> who builds
+          I’m a <strong>Data Scientist &amp; Machine Learning Engineer</strong> who builds
           reproducible, scalable, and cloud-ready ML systems. My work spans
           <strong>end-to-end ML pipelines</strong> (training → evaluation → deployment → monitoring),
           <strong>cloud ML deployment</strong> on Vertex AI and Cloud Run, and
@@ -807,7 +147,7 @@
     </section>
 
     <!-- Experience -->
-    <section id="experience">
+    <section id="experience" class="reveal-on-scroll">
       <div class="container">
         <h2 class="section-title">Experience</h2>
 
@@ -819,7 +159,7 @@
               <div style="margin-top: 0.2rem;">Winnipeg, Canada</div>
             </div>
             <div>
-              <div class="exp-role">Applied ML & MLOps</div>
+              <div class="exp-role">Applied ML &amp; MLOps</div>
               <div class="exp-company">Manifest &amp; Company Inc.</div>
               <div class="exp-badges">
                 <span class="exp-badge">Vertex AI</span>
@@ -856,7 +196,7 @@
               <div style="margin-top: 0.2rem;">Canada Revenue Agency</div>
             </div>
             <div>
-              <div class="exp-role">Data Quality & Compliance Analytics</div>
+              <div class="exp-role">Data Quality &amp; Compliance Analytics</div>
               <div class="exp-company">Canada Revenue Agency</div>
               <div class="exp-badges">
                 <span class="exp-badge">Data Quality</span>
@@ -891,7 +231,7 @@
               <div style="margin-top: 0.2rem;">Northland Properties</div>
             </div>
             <div>
-              <div class="exp-role">Data Operations & Analytics</div>
+              <div class="exp-role">Data Operations &amp; Analytics</div>
               <div class="exp-company">Northland Properties</div>
               <div class="exp-badges">
                 <span class="exp-badge">Reporting Automation</span>
@@ -922,7 +262,7 @@
     </section>
 
     <!-- Projects -->
-    <section id="projects">
+    <section id="projects" class="reveal-on-scroll">
       <div class="container">
         <h2 class="section-title">Selected Projects</h2>
 
@@ -932,6 +272,14 @@
             <div class="project-title-row">
               <h3 class="project-title">Loan Default Prediction — End-to-End MLOps Pipeline</h3>
               <span class="project-tag">MLOps</span>
+            </div>
+            <!-- Optional project image (upload assets/images/loan-default.png) -->
+            <div class="project-media">
+              <img
+                src="assets/images/loan-default.png"
+                alt="Loan default prediction MLOps pipeline"
+                class="project-image"
+              />
             </div>
             <p class="project-meta">
               <strong>Repo:</strong>
@@ -961,6 +309,13 @@
               <h3 class="project-title">RAG System for Canadian Banking FAQs</h3>
               <span class="project-tag">NLP • RAG</span>
             </div>
+            <div class="project-media">
+              <img
+                src="assets/images/rag-project.png"
+                alt="RAG system for Canadian banking FAQs"
+                class="project-image"
+              />
+            </div>
             <p class="project-meta">
               <strong>Repo:</strong>
               <a href="https://github.com/JDede1/rag-project" target="_blank" rel="noreferrer">
@@ -989,6 +344,13 @@
               <h3 class="project-title">Transformer Fine-Tuning — RoBERTa &amp; BART NLP Pipeline</h3>
               <span class="project-tag">NLP</span>
             </div>
+            <div class="project-media">
+              <img
+                src="assets/images/transformers-nlp.png"
+                alt="Transformer fine-tuning NLP pipeline"
+                class="project-image"
+              />
+            </div>
             <p class="project-meta">
               <strong>Repo:</strong>
               <a href="https://github.com/JDede1/applied-nlp-assignment-4" target="_blank" rel="noreferrer">
@@ -1015,6 +377,13 @@
             <div class="project-title-row">
               <h3 class="project-title">Credit Risk Classification — ML Modeling Pipeline</h3>
               <span class="project-tag">ML</span>
+            </div>
+            <div class="project-media">
+              <img
+                src="assets/images/credit-risk.png"
+                alt="Credit risk classification project"
+                class="project-image"
+              />
             </div>
             <p class="project-meta">
               <strong>Repo:</strong>
@@ -1046,12 +415,12 @@
     </section>
 
     <!-- Tech Stack -->
-    <section id="stack">
+    <section id="stack" class="reveal-on-scroll">
       <div class="container">
         <h2 class="section-title">Tech Stack</h2>
 
         <div class="pill-group">
-          <div class="pill-label">Languages & Core Libraries</div>
+          <div class="pill-label">Languages &amp; Core Libraries</div>
           <div class="pill-row">
             <span class="pill">Python</span>
             <span class="pill">NumPy</span>
@@ -1062,7 +431,7 @@
         </div>
 
         <div class="pill-group">
-          <div class="pill-label">Machine Learning & Deep Learning</div>
+          <div class="pill-label">Machine Learning &amp; Deep Learning</div>
           <div class="pill-row">
             <span class="pill">Scikit-learn</span>
             <span class="pill">XGBoost</span>
@@ -1073,7 +442,7 @@
         </div>
 
         <div class="pill-group">
-          <div class="pill-label">NLP / LLMs & RAG</div>
+          <div class="pill-label">NLP / LLMs &amp; RAG</div>
           <div class="pill-row">
             <span class="pill">Transformers (HF)</span>
             <span class="pill">SentenceTransformers</span>
@@ -1083,7 +452,7 @@
         </div>
 
         <div class="pill-group">
-          <div class="pill-label">MLOps, Pipelines & Orchestration</div>
+          <div class="pill-label">MLOps, Pipelines &amp; Orchestration</div>
           <div class="pill-row">
             <span class="pill">MLflow</span>
             <span class="pill">Apache Airflow</span>
@@ -1093,7 +462,7 @@
         </div>
 
         <div class="pill-group">
-          <div class="pill-label">Cloud & Deployment (GCP)</div>
+          <div class="pill-label">Cloud &amp; Deployment (GCP)</div>
           <div class="pill-row">
             <span class="pill">Google Cloud</span>
             <span class="pill">Vertex AI</span>
@@ -1103,7 +472,7 @@
         </div>
 
         <div class="pill-group">
-          <div class="pill-label">Data Engineering & Databases</div>
+          <div class="pill-label">Data Engineering &amp; Databases</div>
           <div class="pill-row">
             <span class="pill">BigQuery</span>
             <span class="pill">SQL</span>
@@ -1112,15 +481,15 @@
         </div>
 
         <div class="pill-group">
-          <div class="pill-label">Monitoring & Evaluation</div>
+          <div class="pill-label">Monitoring &amp; Evaluation</div>
           <div class="pill-row">
             <span class="pill">Evidently AI</span>
-            <span class="pill">Logging & Metrics</span>
+            <span class="pill">Logging &amp; Metrics</span>
           </div>
         </div>
 
         <div class="pill-group">
-          <div class="pill-label">Version Control & Dev Tools</div>
+          <div class="pill-label">Version Control &amp; Dev Tools</div>
           <div class="pill-row">
             <span class="pill">Git</span>
             <span class="pill">GitHub</span>
@@ -1132,9 +501,9 @@
     </section>
 
     <!-- Education & Certifications -->
-    <section id="education">
+    <section id="education" class="reveal-on-scroll">
       <div class="container">
-        <h2 class="section-title">Education & Certifications</h2>
+        <h2 class="section-title">Education &amp; Certifications</h2>
 
         <div class="two-col">
           <!-- Education -->
@@ -1152,7 +521,7 @@
               </div>
               <div class="edu-detail" style="margin-top: 0.3rem;">
                 Degree verification:
-                <a href="https://www.michaelsutter.com/ediploma?fn=diplomastatuscheck&key=0200000070f97859e2abf7fc9e66ea6ca9c7f2b1a1116c7f5febf4cafdb6ac708dcf5dba7020d23b5eda7c540f0b0a2f78ceb9dc041b77d64cfa0bf7408cad9caa677742" target="_blank" rel="noreferrer">
+                <a href="https://www.michaelsutter.com/ediploma?fn=diplomastatuscheck&amp;key=0200000070f97859e2abf7fc9e66ea6ca9c7f2b1a1116c7f5febf4cafdb6ac708dcf5dba7020d23b5eda7c540f0b0a2f78ceb9dc041b77d64cfa0bf7408cad9caa677742" target="_blank" rel="noreferrer">
                   View official record
                 </a>
               </div>
@@ -1213,7 +582,7 @@
     </section>
 
     <!-- Contact -->
-    <section id="contact">
+    <section id="contact" class="reveal-on-scroll">
       <div class="container">
         <h2 class="section-title">Contact</h2>
 
@@ -1283,5 +652,7 @@
     </div>
   </footer>
 </div>
+
+<script src="assets/scripts.js"></script>
 </body>
 </html>
